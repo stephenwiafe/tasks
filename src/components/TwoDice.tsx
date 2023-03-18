@@ -18,18 +18,20 @@ export function TwoDice(): JSX.Element {
     return (
         <div>
             <span data-testid="left-die">{firstDice}</span>
-            <span data-testid="left-die">{secondDice}</span>
+            <span data-testid="right-die">{secondDice}</span>
             <div>
                 <Button onClick={() => setDice1(d6())}>Roll Left</Button>
-                <Button onClick={() => setDice1(d6())}>Roll Left</Button>
+                <Button onClick={() => setDice2(d6())}>Roll Right</Button>
             </div>
-            {firstDice === secondDice && firstDice != 1 ? (
-                <span>Win</span>
-            ) : firstDice !== secondDice ? (
-                <span></span>
-            ) : (
-                <span>Lose</span>
-            )}
+            <div>
+                {firstDice === secondDice && firstDice != 1 ? (
+                    <span>Win</span>
+                ) : firstDice !== secondDice ? (
+                    <span></span>
+                ) : (
+                    <span>Lose</span>
+                )}
+            </div>
         </div>
     );
 }
