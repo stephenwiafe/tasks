@@ -18,7 +18,7 @@ export function ChooseTeam(): JSX.Element {
         setTeam([...team, option]);
     }
 
-    function clearTeam() {
+    function clearAll() {
         setTeam([]);
     }
     return (
@@ -49,7 +49,7 @@ export function ChooseTeam(): JSX.Element {
                             {member}
                         </li>
                     ))}
-                    <Button onClick={clearTeam}>Clear Team</Button>
+                    <Button onClick={clearAll}>Clear Team</Button>
                 </Col>
             </Row>
         </div>
