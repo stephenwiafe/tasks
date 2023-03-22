@@ -10,6 +10,11 @@ import { DoubleHalf } from "./bad-components/DoubleHalf";
 import { ColoredBox } from "./bad-components/ColoredBox";
 import { ShoveBox } from "./bad-components/ShoveBox";
 import { ChooseTeam } from "./bad-components/ChooseTeam";
+import { CheckAnswer } from "./form-components/CheckAnswer";
+import { GiveAttempts } from "./form-components/GiveAttempts";
+import { EditMode } from "./form-components/EditMode";
+import { MultipleChoiceQuestion } from "./form-components/MultipleChoiceQuestion";
+import { ChangeColor } from "./form-components/ChangeColor";
 
 function App(): JSX.Element {
     return (
@@ -19,25 +24,22 @@ function App(): JSX.Element {
                 <div>Stephen Wiafe</div>
             </header>
             <hr></hr>
+
             {<DoubleHalf></DoubleHalf>}
+            <CheckAnswer expectedAnswer="42"></CheckAnswer>
             <hr></hr>
-            <ChooseTeam></ChooseTeam>
+            <GiveAttempts></GiveAttempts>
             <hr></hr>
-            <ColoredBox></ColoredBox>
+            <EditMode></EditMode>
             <hr></hr>
-            <ShoveBox></ShoveBox>
+            <ChangeColor></ChangeColor>
             <hr></hr>
-            <Counter></Counter>
-            <hr />
-            <RevealAnswer></RevealAnswer>
-            <hr />
-            <StartAttempt></StartAttempt>
-            <hr />
-            <TwoDice></TwoDice>
-            <hr />
-            <ChangeType></ChangeType>
-            <hr />
-            <CycleHoliday></CycleHoliday>
+            <MultipleChoiceQuestion
+                options={["a", "b", "c"]}
+                expectedAnswer="b"
+            ></MultipleChoiceQuestion>
+            <hr></hr>
+            {/* <DoubleHalf></DoubleHalf> */}
         </div>
     );
 }
