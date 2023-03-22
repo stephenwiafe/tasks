@@ -19,7 +19,7 @@ function App(): JSX.Element {
                 <div>Stephen Wiafe</div>
             </header>
             <hr></hr>
-            {/* <DoubleHalf></DoubleHalf> */}
+            {/*<DoubleHalf></DoubleHalf>*/}
             <hr></hr>
             <ChooseTeam></ChooseTeam>
             <hr></hr>
